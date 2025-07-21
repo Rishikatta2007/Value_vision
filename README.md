@@ -27,3 +27,15 @@ credit_score.pkl
 ✅ Download from Google Drive:
 
 🔗 https://drive.google.com/file/d/127fn0Dl6Hjod7F79GLe7CEu8LxOAfer5/view?usp=sharing
+
+---
+
+Project Images:
+
+https://github.com/Rishikatta2007/Value_vision/blob/470fe93b757847aed0fb3b6997e5f113d2756715/vv1.jpeg
+
+https://github.com/Rishikatta2007/Value_vision/blob/470fe93b757847aed0fb3b6997e5f113d2756715/vv2.jpeg
+
+https://github.com/Rishikatta2007/Value_vision/blob/470fe93b757847aed0fb3b6997e5f113d2756715/vv3.jpeg
+
+https://github.com/Rishikatta2007/Value_vision/blob/470fe93b757847aed0fb3b6997e5f113d2756715/vv4.jpeg
