@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Predictor - Value Vision</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='selection.css') }}">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">Value Vision</div>
+        <ul class="nav-links">
+            <li><a href="/contact">Contact Us</a></li>
+            <li><a href="#">User Data</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Section for Predictor Selection -->
+    <section class="predictor-selection">
+        <h1>Select Your Predictor</h1>
+        <p>Welcome, {{ session.username }}. Please choose one of the prediction tools below to get started.</p>
+
+        <div class="predictor-container">
+            <!-- Credit Score Predictor -->
+            <div class="predictor-box">
+                <h2>Credit Score Predictor</h2>
+                <p>Get an estimate of your credit score by providing some basic financial information.</p>
+                <ul>
+                    <li>Personal and Financial Information</li>
+                    <li>Credit Card Details (if any)</li>
+                    <li>Loan Repayment History</li>
+                </ul>
+                <a href="/credit_predict" class="predictor-btn">Start Prediction</a>
+            </div>
+
+            <!-- Separator Line -->
+            <div class="vertical-line"></div>
+
+            <!-- Loan Eligibility Predictor -->
+            <div class="predictor-box">
+                <h2>Loan Eligibility Predictor</h2>
+                <p>Find out if you're eligible for a loan by analyzing your credit score and financial profile.</p>
+                <ul>
+                    <li>Income Information</li>
+                    <li>Current Debts</li>
+                    <li>Credit Score and History</li>
+                </ul>
+                <a href="/loan_predict" class="predictor-btn">Check Eligibility</a>
+            </div>
+        </div>
+
+        <!-- Go Back Button -->
+        <button class="back-btn" onclick="history.back()">Go Back</button>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>© 2024 Value Vision. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

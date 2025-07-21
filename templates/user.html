@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='user.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome, {{ user['username'] }}</h1>
+            <p>Your User ID: {{ user['id'] }}</p>
+        </header>
+        
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="{{ url_for('get_started') }}">Get Started</a></li>
+                <li><a href="{{ url_for('loan_predict') }}">Loan Prediction</a></li>
+                <li><a href="{{ url_for('credit_predict') }}">Credit Score Prediction</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+                <li><a href="{{ url_for('logout') }}" class="logout-btn">Logout</a></li>
+            </ul>
+        </nav>
+        
+        <footer>
+            <p>&copy; 2024 Your Website Name. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

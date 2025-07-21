@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='loan.css') }}">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">Loan Prediction App</div>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+        </ul>
+        <a href="/logout" class="logout-btn">Logout</a>
+    </div>
+
+    <!-- Main Section -->
+    <header>
+        <h1>Welcome to the Loan Prediction App</h1>
+        <p>Fill in the details below to predict your loan eligibility</p>
+    </header>
+
+    <!-- Loan Prediction Form -->
+    <section>
+        <form action="{{ url_for('loan_predict') }}" method="POST">
+            <label for="no_of_dep">Number of Dependents</label>
+            <input type="number" name="no_of_dep" id="no_of_dep" min="0" max="5" required>
+
+            <label for="grad">Education</label>
+            <select name="grad" id="grad" required>
+                <option value="Graduated">Graduated</option>
+                <option value="Not Graduated">Not Graduated</option>
+            </select>
+
+            <label for="self_emp">Self Employed</label>
+            <select name="self_emp" id="self_emp" required>
+                <option value="No">No</option>
+                <option value="Yes">Yes</option>
+            </select>
+
+            <label for="Annual_Income">Annual Income</label>
+            <input type="number" name="Annual_Income" id="Annual_Income" required>
+
+            <label for="Loan_Amount">Loan Amount</label>
+            <input type="number" name="Loan_Amount" id="Loan_Amount" required>
+
+            <label for="Loan_Dur">Loan Duration (Years)</label>
+            <input type="number" name="Loan_Dur" id="Loan_Dur" min="0" max="20" required>
+
+            <label for="Cibil">Cibil Score</label>
+            <input type="number" name="Cibil" id="Cibil" min="0" max="1000" required>
+
+            <label for="Assets">Assets</label>
+            <input type="number" name="Assets" id="Assets" required>
+
+            <button type="submit">Predict</button>
+        </form>
+    </section>
+</body>
+</html>

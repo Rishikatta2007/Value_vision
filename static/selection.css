@@ -1,0 +1,159 @@
+/* Basic reset for body and common elements */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa; /* Light background */
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff; /* Navbar color */
+    color: white;
+    padding: 10px 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Main section for predictor selection */
+.predictor-selection {
+    text-align: center;
+    padding: 40px 20px;
+    margin: 0 auto;
+}
+
+.predictor-selection h1 {
+    font-size: 36px;
+    color: #007bff; /* Title color */
+}
+
+.predictor-selection p {
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+/* Predictor container to separate the sections */
+.predictor-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 20px;
+}
+
+/* Individual predictor boxes */
+.predictor-box {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    width: 45%; /* Equal width for both predictors */
+    text-align: left;
+}
+
+.predictor-box h2 {
+    color: #007bff; /* Predictor heading color */
+    font-size: 28px;
+}
+
+.predictor-box p {
+    font-size: 16px;
+    color: #555;
+}
+
+.predictor-box ul {
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+.predictor-box ul li {
+    margin: 5px 0;
+}
+
+.predictor-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    margin-top: 20px;
+    background-color: #28a745; /* Green button color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.predictor-btn:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Vertical line to separate predictors */
+.vertical-line {
+    width: 2px;
+    background-color: #007bff; /* Color of separator */
+    height: auto;
+    margin: 0 20px;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #007bff; /* Footer background */
+    color: white;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    .predictor-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .predictor-box {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .vertical-line {
+        display: none; /* Hide separator on mobile */
+    }
+}
+
+
+/* Go Back Button */
+.back-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 20px;
+    background-color: #007bff; /* Blue button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}

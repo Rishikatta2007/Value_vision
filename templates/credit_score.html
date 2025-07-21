@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Score Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='credit_score.css') }}">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">Credit Score Prediction App</div>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+        </ul>
+        <a href="/logout" class="logout-btn">Logout</a>
+    </div>
+
+    <!-- Main Section -->
+    <header>
+        <h1>Welcome to the Credit Score Prediction App</h1>
+        <p>Fill in the details below to predict your credit score</p>
+    </header>
+
+    <!-- Credit Score Prediction Form -->
+    <section>
+        <form action="{{ url_for('credit_predict') }}" method="POST">
+
+            <label for="annual_income">Annual Income</label>
+            <input type="number" step="0.01" name="annual_income" id="annual_income" required>
+
+            <label for="monthly_salary">Monthly Inhand Salary</label>
+            <input type="number" step="0.01" name="monthly_salary" id="monthly_salary" required>
+
+            <label for="bank_accounts">Number of Bank Accounts</label>
+            <input type="number" name="bank_accounts" id="bank_accounts" required>
+
+            <label for="credit_cards">Number of Credit Cards</label>
+            <input type="number" name="credit_cards" id="credit_cards" required>
+
+            <label for="interest_rate">Interest Rate</label>
+            <input type="number" step="0.01" name="interest_rate" id="interest_rate" required>
+
+            <label for="loans">Number of Loans</label>
+            <input type="number" name="loans" id="loans" required>
+
+            <label for="avg_days_delayed">Average Number of Days Delayed</label>
+            <input type="number" step="0.01" name="avg_days_delayed" id="avg_days_delayed" required>
+
+            <label for="delayed_payments">Number of Delayed Payments</label>
+            <input type="number" name="delayed_payments" id="delayed_payments" required>
+
+            <label for="credit_mix">Credit Mix (0: Bad, 1: Standard, 2: Good)</label>
+            <select name="credit_mix" id="credit_mix" required>
+                <option value="0">Bad</option>
+                <option value="1">Standard</option>
+                <option value="2">Good</option>
+            </select>
+
+            <label for="outstanding_days">Outstanding Days</label>
+            <input type="number" step="0.01" name="outstanding_days" id="outstanding_days" required>
+
+            <label for="credit_history_age">Credit History Age</label>
+            <input type="number" step="0.01" name="credit_history_age" id="credit_history_age" required>
+
+            <label for="emi">Total EMI per Month</label>
+            <input type="number" step="0.01" name="emi" id="emi" required>
+
+            <label for="investment">Amount Invested Monthly</label>
+            <input type="number" step="0.01" name="investment" id="investment" required>
+
+            <label for="monthly_balance">Monthly Balance</label>
+            <input type="number" step="0.01" name="monthly_balance" id="monthly_balance" required>
+
+            <button type="submit">Predict Credit Score</button>
+        </form>
+    </section>
+</body>
+</html>

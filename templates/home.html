@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page - Value Vision</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">Value Vision</div>
+        <ul class="nav-links">
+            {% if session.username %}
+                <li>
+                    <span id="username">{{ session.username }}</span>
+                    <a href="/logout" class="logout-btn">Logout</a>
+                </li>
+            {% else %}
+                <li><a href="/login" class="login-btn">Login</a></li>
+            {% endif %}
+        </ul>
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Dropdown Menu for Contact Us and User Data -->
+    <div class="menu" id="menu">
+        <ul>
+            <li><a href="/user">User Data</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <header>
+        <h1>Welcome to Value Vision</h1>
+        <p>Understand Your Credit Score and Loan Eligibility</p>
+    </header>
+
+    <!-- Introduction Section -->
+    <section>
+        <p>
+            At <strong>Value Vision</strong>, we believe that financial literacy is the key to making informed decisions about your financial future.
+            Our platform provides you with valuable insights into your credit score and loan eligibility, empowering you to take control of your financial health.
+        </p>
+    </section>
+
+    <!-- Why Credit Scores Matter Section -->
+    <section>
+        <h2>Why Credit Scores Matter</h2>
+        <p>
+            Your credit score is a crucial factor in determining your ability to secure loans, credit cards, and favorable interest rates. 
+            A good credit score can save you thousands over the life of a loan, while a poor score can limit your financial options. 
+            Understanding your credit score is the first step towards achieving your financial goals.
+        </p>
+    </section>
+
+    <!-- Our Services Section -->
+    <section>
+        <h2>Our Services</h2>
+        <ul>
+            <li>
+                <h3>1. Credit Score Prediction</h3>
+                <p>
+                    Our advanced machine learning algorithms analyze your financial information to provide an estimated credit score. 
+                    We break down the factors that influence your score, helping you understand where you stand and how to improve.
+                </p>
+            </li>
+            <li>
+                <h3>2. Loan Eligibility Assessment</h3>
+                <p>
+                    Wondering if you qualify for a loan? Our platform assesses your creditworthiness based on your credit score and financial history. 
+                    We offer insights into the types of loans you may qualify for, ensuring you know your options.
+                </p>
+            </li>
+            
+        </ul>
+    </section>
+
+    <!-- How It Works Section -->
+    <section>
+        <h2>How It Works</h2>
+        <ol>
+            <li><strong>Sign Up:</strong> Create a free account to access our services.</li>
+            <li><strong>Input Your Data:</strong> Fill out a simple form with your personal and financial information.</li>
+            <li><strong>Get Instant Results:</strong> Receive immediate predictions for your credit score and loan eligibility.</li>
+            <li><strong>Explore Resources:</strong> Access educational materials to enhance your understanding of credit and loans.</li>
+        </ol>
+    </section>
+
+    <!-- Final Call to Action Section -->
+    <section>
+        <h2>Your Financial Journey Starts Here</h2>
+        <p>
+            Don’t let uncertainty hold you back. Whether you're planning to buy a home, finance a car, or simply want to understand your financial standing, 
+            <strong>Value Vision</strong> is here to help. Join our community today and take the first step towards a brighter financial future!
+        </p>
+        <button><a href="/get_started" style="text-decoration: none; color: white;">Get Started Today!</a></button>
+
+    </section>
+
+    <!-- JavaScript for Dropdown Menu -->
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("menu");
+            menu.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>

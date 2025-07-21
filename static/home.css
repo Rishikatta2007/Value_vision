@@ -1,0 +1,162 @@
+/* Basic reset for body and common elements */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff; /* Navbar color */
+    color: white;
+    padding: 10px 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.login-btn {
+    padding: 10px 12px;
+    background-color: #249ff1; /* Button color */
+    color: rgb(241, 241, 241);
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.logout-btn {
+    padding: 8px 12px;
+    background-color: #ff4c4c; /* Button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.logout-btn:hover {
+    background-color: #ff1c1c; /* Darker red on hover */
+}
+
+/* Main content styling */
+header {
+    text-align: center;
+    background-color: #f8f9fa; /* Light background for header */
+    padding: 50px 20px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+header p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+section {
+    padding: 20px;
+    margin: 0 20px;
+}
+
+section h2 {
+    color: #007bff; /* Color for section headings */
+}
+
+ul, ol {
+    margin: 10px 0;
+}
+
+/* Call to action button */
+button {
+    padding: 10px 20px;
+    background-color: #28a745; /* Button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Dropdown menu styling */
+.menu {
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: 60px; /* Adjust based on navbar height */
+    right: 20px;
+    background-color: white; /* Background for dropdown */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Shadow for dropdown */
+    border-radius: 5px;
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.menu.active {
+    display: block; /* Show menu when active */
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 10px;
+    margin: 0; /* Remove default margin */
+}
+
+.menu li {
+    padding: 5px 0; /* Add some space between items */
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #007bff; /* Set link color to match the theme */
+    display: block;
+    padding: 10px; /* Padding for dropdown links */
+}
+
+.menu li a:hover {
+    background-color: #f0f0f0; /* Change background on hover */
+}
+
+/* Hamburger menu styles */
+.hamburger-menu {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 4px; /* Space between the lines */
+    margin-left: 20px; /* Space from the left */
+}
+
+.hamburger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white; /* Color of hamburger lines */
+    transition: all 0.3s; /* Animation on toggle */
+}
+
+/* Optional: Change colors when menu is active */
+.hamburger-menu.active span {
+    background-color: #ff4c4c; /* Color when menu is active */
+}
